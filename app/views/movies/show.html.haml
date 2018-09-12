@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @movie.name
+%p
+  %strong Director:
+  = @movie.director
+%p
+  %strong Main actor:
+  = @movie.main_actor
+%p
+  %strong Rating:
+  = @movie.rating
+= link_to 'Edit', edit_movie_path(@movie)
+|
+= link_to 'Back', movies_path

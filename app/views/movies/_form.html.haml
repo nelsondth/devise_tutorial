@@ -1,0 +1,23 @@
+= form_with(model: movie, local: true) do |form|
+  - if movie.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(movie.errors.count, "error")
+        prohibited this movie from being saved:
+      %ul
+        - movie.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :director
+    = form.text_field :director
+  .field
+    = form.label :main_actor
+    = form.text_field :main_actor
+  .field
+    = form.label :rating
+    = form.text_field :rating
+  .actions
+    = form.submit
