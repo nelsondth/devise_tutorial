@@ -1,24 +1,19 @@
-# README
+# Tutorial de Devise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* https://github.com/plataformatec/devise
 
-Things you may want to cover:
+Pasos para hacer el setup inicial de devise
 
-* Ruby version
+* Añadir la gema al gemfile `gem 'devise'` y hacer bundle install
 
-* System dependencies
+* Crear el initializer `rails g devise:install`
 
-* Configuration
+* Crear el modelo autenticable `rails g devise User`
 
-* Database creation
+* Verificar cuales son los modulos que se queiren añadir y descomentarlos en la migracion
 
-* Database initialization
+* Añadir el befor_action `authenticate_user!` a los modelos que queramos ponerle protección
 
-* How to run the test suite
+Siguientes pasos: 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Personalizar las vistas / controladores por defecto de devise.
